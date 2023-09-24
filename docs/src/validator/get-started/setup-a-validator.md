@@ -190,16 +190,16 @@ So far we have created a formatted drive, but you do not have access to it until
 sudo mkdir -p /mnt/ledger
 ```
 
-Next, change the ownership of the directory to your `sol` user:
-
-```
-sudo chown -R sol:sol /mnt/ledger
-```
-
-Now you can mount the drive:
+Next, mount the drive:
 
 ```
 sudo mount /dev/nvme0n1 /mnt/ledger
+```
+
+Now you can change the ownership of the directory to your `sol` user:
+
+```
+sudo chown -R sol:sol /mnt/ledger
 ```
 
 ### Formatting And Mounting Drive: AccountsDB
@@ -224,16 +224,16 @@ Create a directory for mounting:
 sudo mkdir -p /mnt/accounts
 ```
 
-Change the ownership of that directory:
-
-```
-sudo chown -R sol:sol /mnt/accounts
-```
-
-And lastly, mount the drive:
+Mount the drive:
 
 ```
 sudo mount /dev/nvme1n1 /mnt/accounts
+```
+
+And lastly, change the ownership of that directory:
+
+```
+sudo chown -R sol:sol /mnt/accounts
 ```
 
 ## System Tuning
